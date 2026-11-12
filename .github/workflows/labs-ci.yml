@@ -1,0 +1,34 @@
+name: Validate companion Python laboratories
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'chapters/**'
+      - '.github/workflows/labs-ci.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax-check extracted teaching programs
+        run: python -m compileall -q chapters
+      - name: Ensure every chapter has code, exercises and worked solutions
+        shell: bash
+        run: |
+          set -euo pipefail
+          for d in chapters/[0-9][0-9]; do
+            test -s "$d/README.md"
+            test -s "$d/exercises.md"
+            test -s "$d/solutions.md"
+            test -n "$(find "$d" -maxdepth 1 -name '*.py' -print -quit)"
+          done
