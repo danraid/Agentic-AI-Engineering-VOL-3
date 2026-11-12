@@ -1,17 +1,22 @@
-# Agentic AI Engineering | Volume 3
+# Agentic AI Engineering | Volume III
 
 ## Architecting and Securing AI Agent Systems
 
-Companion laboratory materials for Chapters 17-28 of **Agentic AI Engineering: From Theory to Production** by **Daniel Raaid**.
+Companion laboratories, exercises and worked solutions for the textbook by **Daniel Raaid**.
 
-This collection contains chapter-organised Python examples, exercises and worked solutions. All examples are educational; they do not establish production security, reliability or regulatory compliance.
+- [Chapter 17](chapters/17/README.md)
+- [Chapter 18](chapters/18/README.md)
+- [Chapter 19](chapters/19/README.md)
+- [Chapter 20](chapters/20/README.md)
+- [Chapter 21](chapters/21/README.md)
+- [Chapter 22](chapters/22/README.md)
+- [Chapter 23](chapters/23/README.md)
+- [Chapter 24](chapters/24/README.md)
+- [Chapter 25](chapters/25/README.md)
+- [Chapter 26](chapters/26/README.md)
+- [Chapter 27](chapters/27/README.md)
+- [Chapter 28](chapters/28/README.md)
 
-## Navigation
+Python 3.12 recommended. Educational mock systems only; not production-grade authorization or safety controls.
 
-Chapter directories and instructions are being added under [chapters](chapters).
-
-## How to use
-
-Use Python 3.12 where practical. Read each chapter's README and exercises before running its code. Each chapter is independent and may include local deterministic simulations. No real credentials, billing systems or production services are required.
-
-Copyright © 2026 Daniel Raaid. Educational examples provided for readers of the series. No licence for redistribution or commercial reuse is implied.
+Copyright © 2026 Daniel Raaid. All rights reserved.
